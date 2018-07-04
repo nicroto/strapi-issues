@@ -30,7 +30,15 @@ module.exports = {
 
   // Before creating a value.
   // Fired before an `insert` query.
-  // beforeCreate: async (model) => {},
+  beforeCreate: async (model) => {
+    strapi.log.info (`Creating Owner...`);
+    var ownedarray = await Ownedarray.create ({
+            items: []
+        });
+
+    strapi.log.info (`Creating owner.ownedarray`);
+    model.ownedarray = ownedarray._id;
+  },
 
   // After creating a value.
   // Fired after an `insert` query.
@@ -50,5 +58,10 @@ module.exports = {
 
   // After destroying a value.
   // Fired after a `delete` query.
-  // afterDestroy: async (model, result) => {}
+  afterDestroy: async (model, result) => {
+    strapi.log.info (`Deleted Owner with _id:${result._id}.`);
+
+    strapi.log.info (`-->Deleting ownedarray with _id:${result.ownedarray._id}`);
+    await Ownedarray.deleteOne ({ _id: result.ownedarray._id });
+  }
 };
