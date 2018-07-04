@@ -2,19 +2,16 @@
   "connection": "default",
   "collectionName": "",
   "info": {
-    "name": "owned",
+    "name": "ownedarray",
     "description": ""
   },
   "options": {
     "timestamps": true
   },
   "attributes": {
-    "name": {
-      "type": "string"
-    },
-    "ownerArray": {
-      "model": "ownedarray",
-      "via": "items"
+    "items": {
+      "collection": "owned",
+      "via": "ownerArray"
     }
   }
 }

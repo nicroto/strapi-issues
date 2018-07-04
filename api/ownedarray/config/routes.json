@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/ownedarray",
+      "handler": "Ownedarray.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/ownedarray/count",
+      "handler": "Ownedarray.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/ownedarray/:_id",
+      "handler": "Ownedarray.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/ownedarray",
+      "handler": "Ownedarray.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/ownedarray/:_id",
+      "handler": "Ownedarray.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/ownedarray/:_id",
+      "handler": "Ownedarray.destroy",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
