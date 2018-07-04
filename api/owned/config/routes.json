@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/owned",
+      "handler": "Owned.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/owned/count",
+      "handler": "Owned.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/owned/:_id",
+      "handler": "Owned.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/owned",
+      "handler": "Owned.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/owned/:_id",
+      "handler": "Owned.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/owned/:_id",
+      "handler": "Owned.destroy",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
