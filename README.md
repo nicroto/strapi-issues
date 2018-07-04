@@ -1,1 +1,3 @@
-## Please switch to the appropriate branch.
+# strapi-issues-dir
+
+A quick description of strapi-issues-dir.
